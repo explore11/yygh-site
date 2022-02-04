@@ -90,7 +90,7 @@
                   <div class="fee"> ￥{{ item.amount }}
                   </div>
                   <div class="button-wrapper">
-                    <div class="v-button" @click="booking(item.id, item.availableNumber)" :style="item.availableNumber == 0 || pageFirstStatus == -1 ? 'background-color: #7f828b;' : ''">
+                    <div class="v-button" @click="booking(item.hosScheduleId, item.availableNumber)" :style="item.availableNumber == 0 || pageFirstStatus == -1 ? 'background-color: #7f828b;' : ''">
                       <span>剩余<span class="number">{{ item.availableNumber }}</span></span></div>
                   </div>
                 </div>
@@ -121,7 +121,7 @@
                   <div class="fee"> ￥{{ item.amount }}
                   </div>
                   <div class="button-wrapper">
-                    <div class="v-button" @click="booking(item.id, item.availableNumber)" :style="item.availableNumber == 0 || pageFirstStatus == -1 ? 'background-color: #7f828b;' : ''">
+                    <div class="v-button" @click="booking(item.hosScheduleId, item.availableNumber)" :style="item.availableNumber == 0 || pageFirstStatus == -1 ? 'background-color: #7f828b;' : ''">
                       <span>剩余<span class="number">{{ item.availableNumber }}</span></span></div>
                   </div>
                 </div>
@@ -313,7 +313,6 @@ export default {
     },
 
     booking(scheduleId, availableNumber) {
-      debugger
       if(availableNumber == 0 || this.pageFirstStatus == -1) {
         this.$message.error('不能预约')
       } else {

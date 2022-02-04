@@ -177,7 +177,6 @@ export default {
     },
 
     onUploadSuccess(response, file) {
-      debugger
       if(response.code !== 200) {
         this.$message.error("上传失败")
         return

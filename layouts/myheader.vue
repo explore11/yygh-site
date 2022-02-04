@@ -173,7 +173,6 @@ export default {
     // 微信登录回调处理
     let self = this;
     window["loginCallback"] = (name,token, openid) => {
-      debugger
       self.loginCallback(name, token, openid);
     }
   },
@@ -214,7 +213,6 @@ export default {
 
     // 登录
     login() {
-      debugger
       this.userInfo.code = this.dialogAtrr.inputValue
 
       if(this.dialogAtrr.loginBtn == '正在提交...') {

@@ -137,7 +137,6 @@ export default {
     },
 
     schedule(depcode) {
-      debugger
       // 登录判断
       let token = cookie.get('token')
       if (!token) {
